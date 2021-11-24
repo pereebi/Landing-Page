@@ -1,13 +1,17 @@
 *{
-    font-family: 'Eczar', serif;
-    background-color: indianred;
+    font-family: 'Josefin Sans', sans-serif;
+    
     margin: 0;
     box-sizing: border-box;
 }
 
+body{
+    background-color: indianred;
+}
+
 section{
     display: flex;
-
+    margin-top: 5%;
 }
 
 hr{    
@@ -24,8 +28,13 @@ hr{
     align-self: center;
 }
 
+.text h1{
+    font-size: 2rem;
+}
+
 .text p{
-    font-weight: 500;
+    font-weight: 100;
+    font-size: 1.5rem;
 }
 
 .image{
@@ -36,8 +45,70 @@ hr{
 .image img{
     border-radius: 8%;
     border: solid 1px grey;
+    align-self: center;
+
+}
+
+.hero img{
+    width: 100%;
+    height: 25rem;
+    margin-top: 3%;
+    position: relative;
+}
+
+.hero-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-txt h1{
+    font-size: 5.5rem;
+    font-weight: 500;
+}
+
+.hero-txt p{
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.text ul{
+    font-size: 1.6rem;
+    padding: 1rem; 
+    text-align: left;  
+}
+
+.text ul li{
+    padding: 0.5rem;
+}
+
+.services{
+    flex-direction: row-reverse;
+}
+
+.gallery{
+    flex-direction: column;
 }
 
 footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgb(165, 164, 164);
+    padding: 4rem;
+    margin-top: 5rem;
+}
+
+.footer-logo{
+    flex: 2;
+    text-align: justify;
+    max-width: 45%;
+
+}
+
+.footer-contact{
+    flex: 2;
+    align-self: center;
     text-align: center;
 }

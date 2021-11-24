@@ -5,67 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Eczar&family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <title>My Custom Landing Page</title>
 </head>
 <body>
+    <!-- header -->
     <header class="header">
         <nav class="nav-bar">
-            <h1>Logo</h1>
-            <ul id="nav-menu"></ul>
+             <img src="images\wedlock logo.jpg" alt="logo" width="100">
+            <!-- navigation bar to be dynamically populated via JavaScript -->
+             <ul id="nav-menu"></ul>
         </nav>
     </header>
     <main>
-        <section>
+        <!-- hero section -->
+        <header class="hero">
+            <img src="images\festival image.jpg" alt="hero-img">
+            <div class="hero-txt">
+                <h1>Event Planning</h1>
+                <p>Making magic at every event!</p>
+            </div>
+        </header>
+        <!-- about section -->
+        <section class="about">
             <div class="text">
-                <h1>section 1</h1>
+                <h1>About</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ratione nobis aperiam eligendi sunt, modi blanditiis ipsum, nihil explicabo ut nesciunt unde! Placeat, excepturi odit.</p>
+                <p>Wedlock is a full service event management firm based in Egbeda, 
+                    Lagos State that was created by pairing together our passion for business and events. We bring a fresh, unique approach to the event management industry.</p>
+                <br>
+                <br>
+                <p>Our team understands that a properly executed event can be leveraged to support an organization’s strategic vision, incorporated into a company’s marketing plan,
+                    or used to build networks and client loyalty.</p>
             </div>   
             <div class="image">
-                <img src="images\dummy-image.png" alt="section-image" width="400">
+                <img src="images\event-planner.jpg" alt="about-img" width="500">
             </div>
         </section>
-        <section>
+        <!-- services section -->
+        <section class="services">
             <div class="text">
-                <h1>section 2</h1>
+                <h1>Services</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ratione nobis aperiam eligendi sunt, modi blanditiis ipsum, nihil explicabo ut nesciunt unde! Placeat, excepturi odit.</p>
+                <!-- <p>Spark has a diverse team, each offering expert knowledge in their field. From strategy planning, budgeting,and comprehensive registration support to marketing and 
+                    branding we bring the most current, innovative and professional market expertise.</p> -->
+                <ul>
+                    Our Services
+                    <li>Project Management & Administration</li>
+                    <li>Event Branding, Maketing & Communication</li>
+                    <li>Facility & Hotel Management</li>
+                    <li>Program Development & Speaker Management</li>
+                    <li>Logistics, Production & On-Site Management</li>
+                </ul>    
             </div>   
             <div class="image">
-                <img src="images\dummy-image.png" alt="section-image" width="400">
+                <img src="images\outdoor-reception1.jpg" alt="services-img" width="500">
             </div>
         </section>
-        <section>
+        <!-- events section -->
+        <section class="events">
             <div class="text">
-                <h1>section 3</h1>
+                <h1>Events</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ratione nobis aperiam eligendi sunt, modi blanditiis ipsum, nihil explicabo ut nesciunt unde! Placeat, excepturi odit.</p>
-            </div>   
+                <p>Wow, we've had a busy year... but always make time for fun!</>
+                <br>   
+                <br>
+                <p>Our clients include not-for-profit organizations, corporate clients,  
+                    regulating bodies and member associations. Each of these organizations  has a unique set of business goals and challenges, 
+                    and has chosen Wedlock because we understand the business of running events.</p>        
+            </div>
             <div class="image">
-                <img src="images\dummy-image.png" alt="section-image" width="400">
+                <img src="images\corporate image.jpg" alt="events-img" width="500">
             </div>
         </section>
-        <section>
+        <!-- gallery section -->
+        <section class="gallery">
             <div class="text">
-                <h1>section 4</h1>
+                <h1>Gallery</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ratione nobis aperiam eligendi sunt, modi blanditiis ipsum, nihil explicabo ut nesciunt unde! Placeat, excepturi odit.</p>
+                <p>Just because seeing is believing!</p>
             </div>   
             <div class="image">
-                <img src="images\dummy-image.png" alt="section-image" width="400">
+                <img src="images\cheers to food.jpg" alt="gallery-img" width="300">
+                <img src="images\reception1.jpg" alt="gallery-img" width="300">
+                <img src="images\dessert in spoons.png" alt="gallery-img" width="300">
+                <img src="images\ballons image.jpg" alt="gallery-img" width="300">
             </div>
         </section>
     </main>
     <footer class="footer">
-        <h1>Logo</h1>
-        <p>Contact us on</p>
-        <span><a href="#">facebook icon</a></span>
-        <span><a href="#">twitter icon</a></span>
-        <span><a href="#">instagram icon</a></span>
-        <p>+2348120649990</p>
-        <a href="#">omololaegbekun@gmail.com</a>
-        <h6>All rights reserved</h6>
+        <div class="footer-logo">    
+            <img src="images\wedlock logo.jpg" alt="logo" width="100">
+            <p>Wedlock approaches every project with meticulous attention to detail and obsessive precision. Regardless of size and scope, we treat your event like a business with clear strategic goals, defined milestones, 
+                and a comprehensive plan to ensure that your event is delivered on time and on budget.</p>
+        </div>
+        <div class="footer-contact">
+            <p>Contact us on</p>
+            <span><a href="#"><img src="images\facebook.png" alt="facebook"></a></span>
+            <span><a href="#"><img src="images\twitter.png" alt="twitter"></a></span>
+            <span><a href="#"><img src="images\instagram (1).png" alt="instagram"></a></span>
+            <p>+2348120649990</p>
+            <a href="#">omololaegbekun@gmail.com</a>
+            <br>
+            <br>
+            <h6>All rights reserved</h6>
+        </div>
     </footer>
     <script src="js\app.js"></script>
 </body>
