@@ -75,6 +75,10 @@ hr{
     letter-spacing: 2px;
 }
 
+.clicked{
+    color: rgb(81, 193, 212);
+}
+
 .nav-btn a:hover{
     color: rgb(206, 71, 71);
 }
@@ -196,4 +200,266 @@ footer{
 
 .footer-contact h6{
     padding-top: 3rem;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+     
+    .text h1{
+        font-size: 1.2rem;
+    }
+
+    .text p{
+        font-size: 0.7rem;
+    } 
+
+    .text ul{
+        font-size: 0.6rem;
+        padding: 1rem; 
+    }
+
+    .text ul li:last-child{
+        display: none;
+    }
+
+    #nav-menu{
+        margin-top: 20px;
+    }
+
+    .nav-list{
+        font-size: 0.85rem;
+    }
+
+    .nav-btn{
+        display: none;
+    }
+
+    .hero-txt h1{
+        font-size: 3rem;
+    }
+    
+    .hero-txt p{
+        font-size: 1.3rem;
+    }
+
+    #about .text br{
+        display: none;
+    }
+
+    #about .image img{
+        width: 120%;
+    }
+
+    #services .image img{
+        width: 120%;
+    }
+
+    #events .image img{
+        width: 120%;
+    }
+    
+    #gallery .image{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #gallery .image img{
+        width: 50%;
+        align-self: center;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    section{
+        margin-top: 1%;
+    }
+
+    .text h1{
+        font-size: 1.5rem;
+    }
+
+    .text p{
+        font-size: 0.85rem;
+    } 
+
+    .text ul{
+        font-size: 0.85rem;
+        padding: 1rem; 
+    }
+
+    .text ul li:last-child{
+        display: none;
+    }
+
+    #nav-menu{
+        margin-top: 20px;
+    }
+
+    .nav-btn{
+        display: none;
+    }
+
+    .hero-txt{
+        top: 50%;
+    }
+    
+    .hero-txt h1{
+        font-size: 3.5rem;
+    }
+    
+    .hero-txt p{
+        font-size: 1.45rem;
+    }
+
+    #about .text br{
+        display: none;
+    }
+
+    #about .image img{
+        width: 120%;
+    }
+
+    #services .image img{
+        width: 120%;
+    }
+
+    #events .image img{
+        width: 120%;
+    }
+
+    #gallery .image img{
+        align-self: center;
+        width: 45%;
+        margin-left: 2rem;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .text h1{
+        font-size: 1.8rem;
+    }
+
+    .text p{
+        font-size: 1.2rem;
+    } 
+
+    .text ul{
+        font-size: 1.2rem;
+        padding: 1rem; 
+    }
+
+    .text ul li:last-child{
+        display: none;  
+    }
+
+    #nav-menu{
+        flex: 75%;
+    }
+
+    .nav-btn{
+        border: 2px solid #f2f2f2;
+        padding: 0.15em 0;
+        border-radius: 20px;
+        display: inline;
+    }
+    
+    .hero-txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-txt h1{
+        font-size: 4rem;
+    }
+    
+    .hero-txt p{
+        font-size: 1.8rem;
+        padding: 1.5rem 2rem;
+    }
+
+    #about .text br{
+        display: none;
+    }
+
+    #about .image img{
+        width: 105%;
+    }
+
+    #services .image img{
+        width: 105%;
+    }
+
+    #events .image img{
+        width: 105%;
+    }
+    
+    #gallery .image{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #gallery .image img{
+        align-self: center;
+        width: 45%;
+        margin-left: 2rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    #nav-menu{
+        flex: 53%;
+    }
+
+    .nav-btn{
+        border: 2px solid #f2f2f2;
+        padding: 1em 0.15em;
+        border-radius: 20px;
+    }
+
+    .hero-txt{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #about .image{
+        align-self: center;
+    }
+
+    #services .image{
+        align-self: center;
+    }
+
+    #gallery{
+        flex-direction: column;
+    }
+
+    #gallery .image{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #gallery .image img{
+        width: 50%;
+        align-self: flex-end;
+    }
+
 }

@@ -1,7 +1,5 @@
 // get elements
-const navbar = document.querySelector('.nav-bar');
-const menu = document.querySelector('#nav-menu');
-const sections = document.querySelectorAll('section'); 
+const menu = document.querySelector('#nav-menu'); 
 
 // create the elements for the nav-bar
 const about = document.createElement('li');
@@ -16,15 +14,15 @@ const meeting = document.createElement('li');
 const meetingLink = document.createElement('a');
 
 // setting data and class attributes
-const aboutData = aboutLink.setAttribute('data-type', 'about');
-const aboutClass = aboutLink.setAttribute('class', 'nav-list');
-const servicesData = servicesLink.setAttribute('data-type', 'services');
-const servicesClass = servicesLink.setAttribute('class', 'nav-list');
-const eventsData = eventsLink.setAttribute('data-type', 'events');
-const eventsClass = eventsLink.setAttribute('class', 'nav-list');
-const galleryData = galleryLink.setAttribute('data-type', 'gallery');
-const galleryClass = galleryLink.setAttribute('class', 'nav-list');
-const meetingBtn = meeting.setAttribute('class', 'nav-list nav-btn');
+aboutLink.setAttribute('data-link', 'about');
+aboutLink.setAttribute('class', 'nav-list');
+servicesLink.setAttribute('data-link', 'services');
+servicesLink.setAttribute('class', 'nav-list');
+eventsLink.setAttribute('data-link', 'events');
+eventsLink.setAttribute('class', 'nav-list');
+galleryLink.setAttribute('data-link', 'gallery');
+galleryLink.setAttribute('class', 'nav-list');
+meeting.setAttribute('class', 'nav-list nav-btn');
 
 
 // add text content to them
@@ -51,25 +49,32 @@ menu.appendChild(events);
 menu.appendChild(gallery);
 menu.appendChild(meeting);
 
-sections.forEach((section) => {
-    const liTag = document.createElement('li');
-    const aTag = document.createElement('a');
-    aTag.innerText = sections.getAttribute('data-nav');
-    aTag.setAttribute('class', 'menu__link');
 
-    // scroll to anchor ID using scroll to event
-    aTag.addEventListener("click", () => {
-        sections.scrollIntoView({behavior: "smooth"});
-        });
+const aTags = document.querySelectorAll('.nav-list');
+
+aTags.forEach((element) => {
+    element.addEventListener('click', () =>{
+        const sectionData = document.getElementById(element.getAttribute('data-link'));
+        sectionData.scrollIntoView({behavior: 'smooth', block: 'center'});
+        
+         element.classList.add('clicked');
+    });
 });
 
 
-// evemtlistner to load the navbar
-document.addEventListener('DOMContentLoaded', function(){
-    return menu;
 
 
-});
+
+
+
+
+
+
+
+
+
+
+
 
 // let element = document.querySelectorAll('.nav-list');
 
