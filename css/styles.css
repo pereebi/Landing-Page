@@ -106,7 +106,7 @@ hr{
 
 .image img{
     border-radius: 8%;
-    border: solid 1px grey;
+    /* border: solid 1px grey; */
     align-self: center;
 
 }
@@ -202,50 +202,110 @@ footer{
     padding-top: 3rem;
 }
 
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
 
 
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
+    .nav-bar{
+        background-color: blue;
+    }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-     
+    #nav-menu{
+        flex: 53%;
+    }
+
+    .nav-btn{
+        border: 2px solid #f2f2f2;
+        padding: 1em 0.15em;
+        border-radius: 20px;
+    }
+
+    .hero-txt{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #about .image{
+        align-self: center;
+    }
+
+    #services .image{
+        align-self: center;
+    }
+
+    #gallery{
+        flex-direction: column;
+    }
+
+    #gallery .image{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #gallery .image img{
+        width: 50%;
+        align-self: flex-end;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 769px and up) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .nav-bar{
+        background-color: violet;
+    }
+
     .text h1{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .text p{
-        font-size: 0.7rem;
+        font-size: 1.2rem;
     } 
 
     .text ul{
-        font-size: 0.6rem;
+        font-size: 1.2rem;
         padding: 1rem; 
     }
 
     .text ul li:last-child{
-        display: none;
+        display: none;  
     }
 
     #nav-menu{
-        margin-top: 20px;
-    }
-
-    .nav-list{
-        font-size: 0.85rem;
+        flex: 75%;
     }
 
     .nav-btn{
-        display: none;
+        border: 2px solid #f2f2f2;
+        padding: 0.15em 0;
+        border-radius: 20px;
+        display: inline;
+    }
+
+    .hero-txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .hero-txt h1{
-        font-size: 3rem;
+        font-size: 4rem;
     }
-    
+
     .hero-txt p{
-        font-size: 1.3rem;
+        font-size: 1.8rem;
+        padding: 1.5rem 2rem;
     }
 
     #about .text br{
@@ -253,32 +313,36 @@ footer{
     }
 
     #about .image img{
-        width: 120%;
+        width: 105%;
     }
 
     #services .image img{
-        width: 120%;
+        width: 105%;
     }
 
     #events .image img{
-        width: 120%;
+        width: 105%;
     }
-    
+
     #gallery .image{
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
     }
 
     #gallery .image img{
-        width: 50%;
         align-self: center;
+        width: 45%;
+        margin-left: 2rem;
     }
-    
+
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+     
+    .nav-bar{
+        background-color: peru;
+    }
 
     section{
         margin-top: 1%;
@@ -343,53 +407,51 @@ footer{
         margin-left: 2rem;
     }
 
+    
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    .nav-bar{
+        background-color: greenyellow;
+    }
 
     .text h1{
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     .text p{
-        font-size: 1.2rem;
+        font-size: 0.7rem;
     } 
 
     .text ul{
-        font-size: 1.2rem;
+        font-size: 0.6rem;
         padding: 1rem; 
     }
 
     .text ul li:last-child{
-        display: none;  
+        display: none;
     }
 
     #nav-menu{
-        flex: 75%;
+        margin-top: 20px;
+    }
+
+    .nav-list{
+        font-size: 0.85rem;
     }
 
     .nav-btn{
-        border: 2px solid #f2f2f2;
-        padding: 0.15em 0;
-        border-radius: 20px;
-        display: inline;
-    }
-    
-    .hero-txt{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: none;
     }
 
     .hero-txt h1{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     
     .hero-txt p{
-        font-size: 1.8rem;
-        padding: 1.5rem 2rem;
+        font-size: 1.3rem;
     }
 
     #about .text br{
@@ -397,69 +459,26 @@ footer{
     }
 
     #about .image img{
-        width: 105%;
+        width: 120%;
     }
 
     #services .image img{
-        width: 105%;
+        width: 120%;
     }
 
     #events .image img{
-        width: 105%;
+        width: 120%;
     }
     
     #gallery .image{
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
 
     #gallery .image img{
-        align-self: center;
-        width: 45%;
-        margin-left: 2rem;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-    #nav-menu{
-        flex: 53%;
-    }
-
-    .nav-btn{
-        border: 2px solid #f2f2f2;
-        padding: 1em 0.15em;
-        border-radius: 20px;
-    }
-
-    .hero-txt{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    #about .image{
-        align-self: center;
-    }
-
-    #services .image{
-        align-self: center;
-    }
-
-    #gallery{
-        flex-direction: column;
-    }
-
-    #gallery .image{
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #gallery .image img{
         width: 50%;
-        align-self: flex-end;
+        align-self: center;
     }
-
 }
+
