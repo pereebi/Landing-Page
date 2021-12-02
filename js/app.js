@@ -22,6 +22,7 @@ eventsLink.setAttribute('data-link', 'events');
 eventsLink.setAttribute('class', 'nav-list');
 galleryLink.setAttribute('data-link', 'gallery');
 galleryLink.setAttribute('class', 'nav-list');
+meetingLink.setAttribute('data-link', 'footer');
 meeting.setAttribute('class', 'nav-list nav-btn');
 
 
@@ -49,11 +50,22 @@ menu.appendChild(events);
 menu.appendChild(gallery);
 menu.appendChild(meeting);
 
-
+// selecting the aTags by class list
 const aTags = document.querySelectorAll('.nav-list');
+
+
 
 aTags.forEach((element) => {
     element.addEventListener('click', () =>{
+
+        // removing the active class on click
+        const activeclass = document.querySelector('.clicked');
+        console.log(activeclass);
+        if(activeclass !== null){
+            activeclass.classList.remove('clicked');
+        }
+
+        // linking the data-link to each section by id to scrollIntoView
         const sectionData = document.getElementById(element.getAttribute('data-link'));
         sectionData.scrollIntoView({behavior: 'smooth', block: 'center'});
         
@@ -62,27 +74,10 @@ aTags.forEach((element) => {
 });
 
 
+const btn = document.querySelector('.nav-btn');
 
+btn.addEventListener('click', () =>{
 
-
-
-
-
-
-
-
-
-
-
-
-
-// let element = document.querySelectorAll('.nav-list');
-
-// sections.forEach(function(item){
-
-//     element.addEventListener('click', function(e){
-//         e.preventDefault();
-        
-//         sections.scrollIntoView({behavior: 'smooth', block: 'center'});
-//     });
-// });
+    const btnData = document.getElementById('footer');
+    btnData.scrollIntoView({behavior: 'smooth', block: 'center'});
+});
