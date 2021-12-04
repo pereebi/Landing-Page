@@ -50,6 +50,7 @@ menu.appendChild(events);
 menu.appendChild(gallery);
 menu.appendChild(meeting);
 
+
 // selecting the aTags by class list
 const aTags = document.querySelectorAll('.nav-list');
 
@@ -81,3 +82,32 @@ btn.addEventListener('click', () =>{
     const btnData = document.getElementById('footer');
     btnData.scrollIntoView({behavior: 'smooth', block: 'center'});
 });
+
+
+// setting the funcionallity for the nav-bar
+// getting the items
+const mobileMenu = document.querySelector('.mobile-menu');
+const menuBtn = document.querySelector('.fa-bars');
+const closeBtn = document.querySelector('.fa-times');
+const menuMenu = document.querySelector('.menu');
+
+function toggleMobileMenu() {
+    if(menuMenu.classList.contains('show-menu')){
+        menuMenu.classList.remove('show-menu');
+        menuBtn.style.display = "block";
+        mobileMenu.style.border = "1px solid black";
+        closeBtn.style.display = "none";
+    }else{
+        menuMenu.classList.add('show-menu');
+        menuBtn.style.display = "none";
+        closeBtn.style.display = "block";
+    }
+}
+
+mobileMenu.addEventListener('click', toggleMobileMenu);
+
+aTags.forEach( 
+    function(aTag) { 
+      aTag.addEventListener("click", toggleMobileMenu);
+    }
+  );
